@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
+import { Component} from '@angular/core';
 import { Egresos } from '../Egresos.model';
 
 @Component({
@@ -8,14 +9,16 @@ import { Egresos } from '../Egresos.model';
 })
 export class EgresosComponent  {
 
-  gasto:number;
+  @Input() gasto: Egresos;
+  egresoInput:number;
 
   constructor() { }
 
   egresos: Egresos[] = [];
 
   agregarGasto(){
-    let gasto1 = new Egresos(this.gasto)
+    let gasto1 = new Egresos(this.egresoInput)
+    console.log(this.egresoInput);
   }
 
 
