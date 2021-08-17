@@ -9,6 +9,7 @@ export class IngresosServicio{
         this.ingresos.splice(indice,1);
     }
     agregar(ingreso: Ingreso){
+        
         this.ingresos.push(ingreso);
         
       }
