@@ -1,1 +1,45 @@
 <p>ingresos works!</p>
+<div class="row form-group">
+  <div class="col-5">
+    <input
+      type="text"
+      id="idNombreGasto"
+      placeholder="Ingrese descripcion"
+      class="text-center form-control"
+      [(ngModel)]="DesIngresoInput"
+    />
+  </div>
+  <div class="col-3">
+    <input
+      type="number"
+      id="idGasto"
+      placeholder="$$$"
+      class="text-center form-control"
+      [(ngModel)]="IngresoInput"
+    />
+  </div>
+
+  <div class="col-2">
+    <button type="submit" class="btn btn-primary" (click)="agregarIngreso()">
+      ingreso
+    </button>
+  </div>
+</div>
+
+<form class="form-group form-control row">
+  <h3>aca va la lista de ingresos</h3>
+  <div *ngFor="let ingreso of ingresos" class="row form-group">
+    <div class="col-5">{{ ingreso.ingreso }}</div>
+    <div class="col-5">{{ ingreso.valor }}</div>
+    <div class="col-1">
+      <button
+        type="submit"
+        class="btn btn-dark"
+        (click)="eliminarRegistro(ingreso)"
+      >
+        eliminar
+      </button>
+      <!-- <i class="ion-ios-close-outline" ">x</i> -->
+    </div>
+  </div>
+</form>

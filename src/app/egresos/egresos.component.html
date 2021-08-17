@@ -1,14 +1,25 @@
 <p>egresos works!</p>
+
 <div class="row form-group">
-  <div class="col-6">
+  <div class="col-5">
+    <input
+      type="text"
+      id="idNombreGasto"
+      placeholder="Ingrese descripcion"
+      class="text-center form-control"
+      [(ngModel)]="DesEgresoInput"
+    />
+  </div>
+  <div class="col-3">
     <input
       type="number"
       id="idGasto"
-      placeholder="Ingrese gastos"
+      placeholder="$$$"
       class="text-center form-control"
-     [(ngModel)] = "egresoInput"
+      [(ngModel)]="EgresoInput"
     />
   </div>
+  
   <div class="col-2">
     <button type="submit" class="btn btn-danger" (click)="agregarGasto()">
       Gasto
@@ -18,8 +29,5 @@
 
 <form class="form-group form-control row">
   <h3>aca va la lista de gastos</h3>
-
-  <div>
-      <p>{{egresoInput}}</p>
-  </div>
+  
 </form>
