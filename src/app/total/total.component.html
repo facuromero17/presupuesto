@@ -1,6 +1,16 @@
 <header>
-  <div class="text-center ">
-    <h3>dinero disponible:</h3>
-    <h1>(dinero)</h1>
+  <div class="text-center">
+    <div class="container-fluid row justify-content-md-center">
+      <h1>dinero total:{{ getPresupuestoTotal() }}</h1>
+      <div class="row container justify-content-md-center">
+        <div class="col-4">
+          <h3>total ingresos:{{ getIngresosTotal() }}</h3>
+        </div>
+
+        <div class="col-4">
+          <h3>total egresos:{{ getEgresosTotal() }}</h3>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

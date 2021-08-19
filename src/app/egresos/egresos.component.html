@@ -1,4 +1,4 @@
-<p>egresos works!</p>
+
 
 <div class="row form-group">
   <div class="col-5">
@@ -28,6 +28,22 @@
 </div>
 
 <form class="form-group form-control row">
-  <h3>aca va la lista de gastos</h3>
+  <h3>Gastos</h3>
+  
+    
+    <div *ngFor="let egreso of egresos" class="row form-group">
+      <div class="col-5">{{ egreso.descripcion }}</div>
+      <div class="col-5">{{ egreso.valor }}</div>
+      <div class="col-1">
+        <button
+          type="submit"
+          class="btn btn-dark"
+          (click)="eliminarGasto(egreso)"
+        >
+          eliminar
+        </button>
+        <!-- <i class="ion-ios-close-outline" ">x</i> -->
+      </div>
+    </div>
   
 </form>

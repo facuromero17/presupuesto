@@ -19,14 +19,16 @@ export class EgresosComponent implements OnInit {
     this.egresos = this.EgresoServicio.egresos;
   }
 
-  eliminar(egreso:Egresos){
+  eliminarGasto(egreso:Egresos){
   const indice: number = this.egresos.indexOf(egreso)
+  
   this.egresos.splice(indice,1)
   }
 
   agregarGasto(){
-   
-    
+   let egreso1 = new Egresos(this.DesEgresoInput,this.EgresoInput);
+   this.EgresoServicio.agregar(egreso1);
+    console.log("se cargo un egreso");
   }
 
 

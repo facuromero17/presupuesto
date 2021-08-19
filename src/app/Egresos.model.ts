@@ -1,3 +1,3 @@
 export class Egresos{
-    constructor(public descripcion:string,public gasto:number){}
+    constructor(public descripcion:string,public valor:number){}
 }
