@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Egresos } from '../Egresos.model';
 import { EgresosServicio } from '../egresos/EgresoServicio.service';
 import { Ingreso } from '../ingresos/Ingresos.model';
@@ -12,9 +12,9 @@ import { IngresosServicio } from '../ingresos/IngresosServicio.service';
 export class TotalComponent implements OnInit {
   ingresos: Ingreso[] = [];
   egresos: Egresos[] = [];
+ 
 
-
-  IngresoTotal:number;
+  @Input()IngresoTotal:number;
   
 
   constructor(
@@ -30,14 +30,14 @@ export class TotalComponent implements OnInit {
   //metodos
   getIngresosTotal() {
     let ingresoTotal:number=0;
-    this.ingresos.forEach(ingreso =>{ingresoTotal =+ ingreso.valor});
+    this.ingresos.forEach(ingreso =>{ingresoTotal = ingresoTotal + ingreso.valor});
     
     return ingresoTotal;
     
   }
   getEgresosTotal() {
     let egresoTotal:number=0;
-    this.egresos.forEach(egreso =>{egresoTotal =+ egreso.valor} )
+    this.egresos.forEach(egreso =>{egresoTotal = egresoTotal + egreso.valor} )
     return egresoTotal;
   }
 

@@ -23,12 +23,21 @@ export class IngresosComponent implements OnInit {
 
   
   agregarIngreso(){
+    
     let ingreso1 = new Ingreso(this.DesIngresoInput,this.IngresoInput);
+    
     this.IngresosServicio.agregar(ingreso1);
+
     console.log("se agrego un ingreso")
+  }
+  sumaIngreso(){
+    
+
   }
   
   eliminarRegistro(ingreso: Ingreso){
     this.IngresosServicio.eliminar(ingreso);
   }
+
+  
 }

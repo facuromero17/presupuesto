@@ -1,14 +1,14 @@
 <header>
   <div class="text-center">
     <div class="container-fluid row justify-content-md-center">
-      <h1>dinero total:{{ getPresupuestoTotal() }}</h1>
+      <h1>dinero total:{{ getPresupuestoTotal() | currency:"ARS" : "$":"1.2-2"}}</h1>
       <div class="row container justify-content-md-center">
         <div class="col-4">
-          <h3>total ingresos:{{ getIngresosTotal() }}</h3>
+          <h3>total ingresos:{{ getIngresosTotal() | currency:"ARS" : "$":"1.2-2" }}</h3>
         </div>
 
         <div class="col-4">
-          <h3>total egresos:{{ getEgresosTotal() }}</h3>
+          <h3>total egresos:{{ getEgresosTotal() | currency:"ARS" : "$":"1.2-2"}}</h3>
         </div>
       </div>
     </div>
