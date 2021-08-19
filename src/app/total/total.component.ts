@@ -42,6 +42,7 @@ export class TotalComponent implements OnInit {
   }
 
   getPresupuestoTotal() {
+    
    this.IngresoTotal= this.getIngresosTotal() - this.getEgresosTotal();
    return this.IngresoTotal;
   }
